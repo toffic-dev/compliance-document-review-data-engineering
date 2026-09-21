@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+pydantic
+pdfplumber
+python-docx
+openpyxl
+psycopg2-binary
+requests
+sentence-transformers
