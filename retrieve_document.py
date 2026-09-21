@@ -1,3 +1,4 @@
+```python
 import os
 import requests
 
@@ -24,7 +25,10 @@ def retrieve_document_file(document_id):
         timeout=30,
     )
 
-    response.raise_for_status()
+    if response.status_code != 200:
+        raise RuntimeError(
+            f"Backend returned HTTP {response.status_code}: {response.text}"
+        )
 
     return (
         response.content,
@@ -37,3 +41,4 @@ if __name__ == "__main__":
 
     print(f"Retrieved {len(file_bytes)} bytes")
     print(f"Content-Type: {content_type}")
+```
