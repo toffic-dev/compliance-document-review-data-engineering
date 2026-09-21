@@ -1,4 +1,3 @@
-```python
 import os
 import requests
 
@@ -41,4 +40,3 @@ if __name__ == "__main__":
 
     print(f"Retrieved {len(file_bytes)} bytes")
     print(f"Content-Type: {content_type}")
-```
